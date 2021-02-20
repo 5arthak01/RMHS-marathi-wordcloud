@@ -150,6 +150,7 @@ wordcloud = WordCloud(
     min_font_size=10,
     regexp=r"[\u0900-\u097F]+",
 ).generate(words)
+# wordcloud.to_file("wordcloud.png")
 
 # plot the WordCloud image
 plt.figure(figsize=(8, 8), facecolor=None)
