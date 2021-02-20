@@ -6,7 +6,8 @@ class UrlSpider(scrapy.Spider):
 
     def start_requests(self):
         urls = [
-            f"https://www.loksatta.com/page/{x}/?s=farmers+protest" for x in range(1, 3)
+            f"https://maharashtratimes.com/topics/%E0%A4%B6%E0%A5%87%E0%A4%A4%E0%A4%95%E0%A4%B0%E0%A5%80-%E0%A4%86%E0%A4%82%E0%A4%A6%E0%A5%8B%E0%A4%B2%E0%A4%A8/{x}"
+            for x in range(1, 3)
         ]
 
         for url in urls:

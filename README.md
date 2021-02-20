@@ -4,13 +4,20 @@ Note: This is a markdown file, and for better understanding nust be opened with 
 
 Sarthak Agrawal - 2019115003
 
-### Abstract
-
-I have scraped TOI articles relevant to the farmer's protest, stored in file articles.csv
-
 ### Methodology
 
 I have used [Scrapy](https://scrapy.org/) because I have experience with it, and it is considered as fast.
+
+###### Loksatta articles
+
+The `loksatta_articles.csv` file does not have a header and has `~` as delimiter. It has columns in the following order:
+
+1. title
+2. description
+3. date
+4. content
+
+`all_loksatta_articles.csv` has headers and `|` as delimiter.
 
 - Instructions to run/reproduce:
 
