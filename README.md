@@ -6,18 +6,14 @@ Sarthak Agrawal - 2019115003
 
 ### Methodology
 
-I have used [Scrapy](https://scrapy.org/) because I have experience with it, and it is considered as fast.
+Technology used is [Scrapy](https://scrapy.org/) because it is considered extremely fast, and allows both precision and accuracy since we can use CSS selectors to target elements.
 
-###### Loksatta articles
+### Articles archive
 
-The `loksatta_articles.csv` file does not have a header and has `~` as delimiter. It has columns in the following order:
-
-1. title
-2. description
-3. date
-4. content
-
-`all_loksatta_articles.csv` has headers and `|` as delimiter.
+- Loksatta
+  The `loksatta_articles.csv` file does not have a header and has `~` as delimiter. It has columns title, description, date, content (in this order). File `all_loksatta_articles.csv` has these headers as the first line and `|` as delimiter, with the addition of URLs for each article as the first column.
+- Maharashtra times
+  `maharashtra_times_articles.csv` does not have a header and has the columns title, author, date, highlights, content (in this order) and `|` as delimiter. File `all_mt_times_articles.csv` has these headers as the first line, with the addition of URLs for each article as the first column.
 
 - Instructions to run/reproduce:
 
