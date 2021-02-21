@@ -132,15 +132,16 @@ ALPHABET = (
 stpwrds = []
 with open("marathi_stopwords.txt", "r", encoding="utf-8") as f:
     stpwrds = f.readlines()
+stopwords = set(STOP_LIST + [x.strip(" \n") for x in stpwrds] + ALPHABET)
 
 words = ""
-with open("./mt_times/all_mt_times_articles.csv", "r") as csvfile:
+with open("./loksatta/all_loksatta_articles.csv", "r") as csvfile:
     spamreader = csv.reader(csvfile, delimiter="|")
     count = 0
     for article in spamreader:
         words += article[-1] + " "
+words = words.replace("  ", " ")
 
-stopwords = set(STOP_LIST + [x.strip(" \n") for x in stpwrds] + ALPHABET)
 wordcloud = WordCloud(
     font_path="Lohit-Marathi.ttf",
     width=800,
@@ -150,12 +151,12 @@ wordcloud = WordCloud(
     min_font_size=10,
     regexp=r"[\u0900-\u097F]+",
 ).generate(words)
-# wordcloud.to_file("wordcloud.png")
+wordcloud.to_file("loksatta_wordcloud.png")
 
-# plot the WordCloud image
-plt.figure(figsize=(8, 8), facecolor=None)
-plt.imshow(wordcloud)
-plt.axis("off")
-plt.tight_layout(pad=0)
+# # plot the WordCloud image
+# plt.figure(figsize=(8, 8), facecolor=None)
+# plt.imshow(wordcloud)
+# plt.axis("off")
+# plt.tight_layout(pad=0)
 
-plt.show()
+# plt.show()
